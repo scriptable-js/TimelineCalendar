@@ -20,7 +20,7 @@ DEFAULT_PARAMS = {
   lineWidth: 10,
   ellipseWidth: 20,
   allDayEvents: true,  // Uncoment this or add to widget parameter to show two column events
-  textToRight: false,    // Saves space by adding all texts to once side
+  textToRight: true,    // Saves space by adding all texts to once side
 };
 
 Date.prototype.addHours = function (numHours) {
@@ -355,7 +355,7 @@ class TimelineCalendar {
 var params = {}
 if (args.widgetParameter != null) params = JSON.parse(args.widgetParameter);
 
-const lineCalendar = new TimelineCalendar({params});
+const lineCalendar = new TimelineCalendar(params);
 
 const w = lineCalendar.initWidget();
 // var stack = addStack(w, "vertical", true);
